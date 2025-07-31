@@ -14,7 +14,7 @@ const Education = () => {
       degree: 'Master of Science in Computer Science',
       institution: 'University of Technology',
       period: '2021 - 2023',
-      location: 'New York, USA',
+      location: 'New Yorgggk, USA',
       description: 'Specialized in Software Engineering and Data Science with focus on machine learning algorithms and web development technologies.',
       gpa: '3.9/4.0',
       icon: '🎓',
