@@ -59,7 +59,7 @@ const Resume = () => {
   };
 
   return (
-    <section id="resume" className="section-padding bg-gradient-to-br from-dark-50 to-dark-100">
+    <section id="resume" className="section-padding bg-gray-900">
       <div className="container-custom">
         <motion.div
           ref={ref}
@@ -68,10 +68,10 @@ const Resume = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold text-dark-800 mb-4">
+          <h2 className="text-4xl font-bold text-white mb-4">
             My <span className="gradient-text">Resume</span>
           </h2>
-          <p className="text-lg text-dark-600 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             A comprehensive overview of my professional experience, skills, and achievements 
             in web development and data analysis.
           </p>
@@ -85,22 +85,22 @@ const Resume = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
             className="lg:col-span-2"
           >
-            <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700">
               {/* Header */}
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-dark-800 mb-2">Faizan Ahmad</h3>
-                <p className="text-xl text-primary-600 mb-4">Web Developer & Data Analyst</p>
-                <div className="flex flex-wrap justify-center gap-4 text-sm text-dark-600">
+                <h3 className="text-3xl font-bold text-white mb-2">Faizan Ahmad</h3>
+                <p className="text-xl text-purple-400 mb-4">Web Developer & Data Analyst</p>
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-300">
                   <div className="flex items-center space-x-1">
-                    <FiMail className="text-primary-600" />
+                    <FiMail className="text-purple-400" />
                     <span>faizan@example.com</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <FiPhone className="text-primary-600" />
+                    <FiPhone className="text-purple-400" />
                     <span>+1 (555) 123-4567</span>
                   </div>
                   <div className="flex items-center space-x-1">
-                    <FiMapPin className="text-primary-600" />
+                    <FiMapPin className="text-purple-400" />
                     <span>New York, USA</span>
                   </div>
                 </div>
@@ -108,7 +108,7 @@ const Resume = () => {
 
               {/* Experience */}
               <div className="mb-8">
-                <h4 className="text-xl font-bold text-dark-800 mb-4 border-b-2 border-primary-200 pb-2">
+                <h4 className="text-xl font-bold text-white mb-4 border-b-2 border-purple-500/30 pb-2">
                   Professional Experience
                 </h4>
                 <div className="space-y-6">
@@ -118,15 +118,15 @@ const Resume = () => {
                       initial={{ opacity: 0, y: 20 }}
                       animate={inView ? { opacity: 1, y: 0 } : {}}
                       transition={{ delay: 0.4 + index * 0.1, duration: 0.5 }}
-                      className="border-l-4 border-primary-500 pl-4"
+                      className="border-l-4 border-purple-500 pl-4"
                     >
                       <div className="flex justify-between items-start mb-2">
-                        <h5 className="text-lg font-bold text-dark-800">{exp.title}</h5>
-                        <span className="text-sm text-primary-600 font-medium">{exp.period}</span>
+                        <h5 className="text-lg font-bold text-white">{exp.title}</h5>
+                        <span className="text-sm text-purple-400 font-medium">{exp.period}</span>
                       </div>
-                      <p className="text-primary-600 font-medium mb-2">{exp.company}</p>
-                      <p className="text-dark-600 mb-3">{exp.description}</p>
-                      <ul className="list-disc list-inside space-y-1 text-sm text-dark-600">
+                      <p className="text-purple-400 font-medium mb-2">{exp.company}</p>
+                      <p className="text-gray-300 mb-3">{exp.description}</p>
+                      <ul className="list-disc list-inside space-y-1 text-sm text-gray-300">
                         {exp.achievements.map((achievement, achievementIndex) => (
                           <li key={achievementIndex}>{achievement}</li>
                         ))}
@@ -138,17 +138,17 @@ const Resume = () => {
 
               {/* Skills */}
               <div>
-                <h4 className="text-xl font-bold text-dark-800 mb-4 border-b-2 border-primary-200 pb-2">
+                <h4 className="text-xl font-bold text-white mb-4 border-b-2 border-purple-500/30 pb-2">
                   Skills
                 </h4>
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h5 className="font-semibold text-dark-800 mb-2">Technical Skills</h5>
+                    <h5 className="font-semibold text-white mb-2">Technical Skills</h5>
                     <div className="flex flex-wrap gap-2">
                       {skills.technical.map((skill) => (
                         <span
                           key={skill}
-                          className="px-3 py-1 bg-primary-50 text-primary-700 text-sm rounded-full"
+                          className="px-3 py-1 bg-purple-500/20 text-purple-400 text-sm rounded-full"
                         >
                           {skill}
                         </span>
@@ -156,12 +156,12 @@ const Resume = () => {
                     </div>
                   </div>
                   <div>
-                    <h5 className="font-semibold text-dark-800 mb-2">Soft Skills</h5>
+                    <h5 className="font-semibold text-white mb-2">Soft Skills</h5>
                     <div className="flex flex-wrap gap-2">
                       {skills.soft.map((skill) => (
                         <span
                           key={skill}
-                          className="px-3 py-1 bg-gray-100 text-dark-700 text-sm rounded-full"
+                          className="px-3 py-1 bg-gray-700 text-gray-300 text-sm rounded-full"
                         >
                           {skill}
                         </span>
@@ -180,33 +180,14 @@ const Resume = () => {
             transition={{ delay: 0.4, duration: 0.8 }}
             className="space-y-6"
           >
-            {/* Spline Robot */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-              <div className="text-center mb-4">
-                <h3 className="text-xl font-bold text-dark-800 mb-2">AI Assistant</h3>
-                <p className="text-dark-600 text-sm mb-4">
-                  Meet my AI assistant - ready to help with your projects!
-                </p>
-              </div>
-              <div className="w-full h-64 rounded-lg overflow-hidden">
-                <iframe
-                  src="https://my.spline.design/nexbotrobotcharacterconcept-h4v694wm6zDPyIWBKbjAIHP1/"
-                  title="AI Assistant Robot"
-                  className="w-full h-full border-0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                />
-              </div>
-            </div>
-
             {/* Download Card */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
               <div className="text-center mb-6">
-                <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FiDownload className="text-2xl text-primary-600" />
+                <div className="w-16 h-16 bg-purple-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <FiDownload className="text-2xl text-purple-400" />
                 </div>
-                <h3 className="text-xl font-bold text-dark-800 mb-2">Download Resume</h3>
-                <p className="text-dark-600 text-sm">
+                <h3 className="text-xl font-bold text-white mb-2">Download Resume</h3>
+                <p className="text-gray-300 text-sm">
                   Get a detailed version of my resume in PDF format
                 </p>
               </div>
@@ -215,7 +196,7 @@ const Resume = () => {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 onClick={handleDownload}
-                className="w-full btn-primary mb-4"
+                className="w-full bg-purple-600 hover:bg-purple-700 text-white py-3 px-6 rounded-lg transition-colors duration-200 mb-4"
               >
                 Download PDF
               </motion.button>
@@ -223,7 +204,7 @@ const Resume = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="w-full btn-secondary"
+                className="w-full bg-gray-700 hover:bg-gray-600 text-white py-3 px-6 rounded-lg transition-colors duration-200"
               >
                 <FiEye className="inline mr-2" />
                 Preview Online
@@ -231,32 +212,32 @@ const Resume = () => {
             </div>
 
             {/* Contact Info */}
-            <div className="bg-white p-6 rounded-xl shadow-lg border border-gray-100">
-              <h3 className="text-lg font-bold text-dark-800 mb-4">Contact Information</h3>
+            <div className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
+              <h3 className="text-lg font-bold text-white mb-4">Contact Information</h3>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
-                  <FiMail className="text-primary-600" />
-                  <span className="text-dark-600">faizan@example.com</span>
+                  <FiMail className="text-purple-400" />
+                  <span className="text-gray-300">faizan@example.com</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FiPhone className="text-primary-600" />
-                  <span className="text-dark-600">+1 (555) 123-4567</span>
+                  <FiPhone className="text-purple-400" />
+                  <span className="text-gray-300">+1 (555) 123-4567</span>
                 </div>
                 <div className="flex items-center space-x-3">
-                  <FiMapPin className="text-primary-600" />
-                  <span className="text-dark-600">New York, USA</span>
+                  <FiMapPin className="text-purple-400" />
+                  <span className="text-gray-300">New York, USA</span>
                 </div>
               </div>
               
-              <div className="mt-4 pt-4 border-t border-gray-200">
-                <h4 className="font-semibold text-dark-800 mb-2">Social Links</h4>
+              <div className="mt-4 pt-4 border-t border-gray-600">
+                <h4 className="font-semibold text-white mb-2">Social Links</h4>
                 <div className="flex space-x-3">
                   <motion.a
                     whileHover={{ scale: 1.1 }}
                     href="https://github.com/faizanahmad"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-dark-600 hover:text-primary-600 transition-colors duration-200"
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
                   >
                     <FiGithub className="text-xl" />
                   </motion.a>
@@ -265,7 +246,7 @@ const Resume = () => {
                     href="https://linkedin.com/in/faizanahmad"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-dark-600 hover:text-primary-600 transition-colors duration-200"
+                    className="text-gray-300 hover:text-purple-400 transition-colors duration-200"
                   >
                     <FiLinkedin className="text-xl" />
                   </motion.a>
@@ -279,4 +260,4 @@ const Resume = () => {
   );
 };
 
-export default Resume; 
+export default Resume;

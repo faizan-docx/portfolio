@@ -14,7 +14,7 @@ const Education = () => {
       degree: 'Master of Science in Computer Science',
       institution: 'University of Technology',
       period: '2021 - 2023',
-      location: 'New Yorgggk, USA',
+      location: 'New York, USA',
       description: 'Specialized in Software Engineering and Data Science with focus on machine learning algorithms and web development technologies.',
       gpa: '3.9/4.0',
       icon: '🎓',
@@ -70,38 +70,38 @@ const Education = () => {
     >
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
-          <div className="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
             <span className="text-2xl">{item.icon}</span>
           </div>
           {!isLast && (
-            <div className="w-0.5 h-16 bg-primary-200 mx-auto mt-2"></div>
+            <div className="w-0.5 h-16 bg-purple-500/30 mx-auto mt-2"></div>
           )}
         </div>
         
-        <div className="flex-1 bg-white p-6 rounded-xl shadow-lg border border-gray-100">
+        <div className="flex-1 bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
           <div className="flex items-center justify-between mb-2">
-            <h3 className="text-xl font-bold text-dark-800">{item.degree}</h3>
-            <span className="text-sm font-semibold text-primary-600 bg-primary-50 px-3 py-1 rounded-full">
+            <h3 className="text-xl font-bold text-white">{item.degree}</h3>
+            <span className="text-sm font-semibold text-purple-400 bg-purple-500/20 px-3 py-1 rounded-full">
               {item.gpa}
             </span>
           </div>
           
-          <div className="flex items-center space-x-4 text-sm text-dark-600 mb-3">
+          <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-3">
             <div className="flex items-center space-x-1">
-              <FiBook className="text-primary-600" />
+              <FiBook className="text-purple-400" />
               <span>{item.institution}</span>
             </div>
             <div className="flex items-center space-x-1">
-              <FiCalendar className="text-primary-600" />
+              <FiCalendar className="text-purple-400" />
               <span>{item.period}</span>
             </div>
             <div className="flex items-center space-x-1">
-              <FiMapPin className="text-primary-600" />
+              <FiMapPin className="text-purple-400" />
               <span>{item.location}</span>
             </div>
           </div>
           
-          <p className="text-dark-600 leading-relaxed">{item.description}</p>
+          <p className="text-gray-300 leading-relaxed">{item.description}</p>
         </div>
       </div>
     </motion.div>
@@ -112,31 +112,31 @@ const Education = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
-      className="bg-white p-6 rounded-xl shadow-lg border border-gray-100 card-hover"
+      className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700 card-hover"
     >
       <div className="flex items-center space-x-4 mb-4">
         <div className="text-3xl">{cert.icon}</div>
         <div>
-          <h4 className="text-lg font-bold text-dark-800">{cert.name}</h4>
-          <p className="text-sm text-dark-600">{cert.issuer}</p>
+          <h4 className="text-lg font-bold text-white">{cert.name}</h4>
+          <p className="text-sm text-gray-300">{cert.issuer}</p>
         </div>
       </div>
       
       <div className="space-y-2">
         <div className="flex justify-between items-center">
-          <span className="text-sm text-dark-600">Date:</span>
-          <span className="text-sm font-medium text-dark-800">{cert.date}</span>
+          <span className="text-sm text-gray-300">Date:</span>
+          <span className="text-sm font-medium text-white">{cert.date}</span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-sm text-dark-600">Credential ID:</span>
-          <span className="text-sm font-medium text-primary-600">{cert.credential}</span>
+          <span className="text-sm text-gray-300">Credential ID:</span>
+          <span className="text-sm font-medium text-purple-400">{cert.credential}</span>
         </div>
       </div>
     </motion.div>
   );
 
   return (
-    <section id="education" className="section-padding relative">
+    <section id="education" className="section-padding relative bg-gray-900">
       {/* 3D Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -196,7 +196,7 @@ const Education = () => {
 
         {/* Education Timeline */}
         <div className="mb-16">
-          <h3 className="text-2xl font-bold text-dark-800 text-center mb-8">
+          <h3 className="text-2xl font-bold text-white text-center mb-8">
             Academic Background
           </h3>
           <div className="max-w-4xl mx-auto">
@@ -213,7 +213,7 @@ const Education = () => {
 
         {/* Certifications */}
         <div>
-          <h3 className="text-2xl font-bold text-dark-800 text-center mb-8">
+          <h3 className="text-2xl font-bold text-white text-center mb-8">
             Professional Certifications
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -230,12 +230,12 @@ const Education = () => {
           transition={{ delay: 1, duration: 0.8 }}
           className="mt-16 text-center"
         >
-          <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100 max-w-2xl mx-auto">
-            <FiAward className="text-4xl text-primary-600 mx-auto mb-4" />
-            <h4 className="text-xl font-bold text-dark-800 mb-2">
+          <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700 max-w-2xl mx-auto">
+            <FiAward className="text-4xl text-purple-400 mx-auto mb-4" />
+            <h4 className="text-xl font-bold text-white mb-2">
               Continuous Learning
             </h4>
-            <p className="text-dark-600">
+            <p className="text-gray-300">
               I believe in staying updated with the latest technologies and industry trends. 
               Currently pursuing advanced certifications in cloud computing and machine learning 
               to expand my skill set and deliver better solutions.
@@ -247,4 +247,4 @@ const Education = () => {
   );
 };
 
-export default Education; 
+export default Education;
