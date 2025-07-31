@@ -1,68 +1,158 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+@import "tailwindcss";
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
 
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+@layer base {
+  html {
+    scroll-behavior: smooth;
   }
-  a:hover {
-    color: #747bff;
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    color: #ffffff;
+    position: relative;
+    overflow-x: hidden;
   }
-  button {
-    background-color: #f9f9f9;
+
+  /* Animated background elements/* Cyberpunk Grid Background */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    /* Dark base */
+    linear-gradient(to bottom, #0a0a14 0%, #121220 100%),
+    /* Grid pattern */
+    linear-gradient(rgba(20, 255, 236, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 255, 236, 0.1) 1px, transparent 1px);
+  background-size: 
+    100% 100%,
+    40px 40px,
+    40px 40px;
+  animation: 
+    gridScan 8s linear infinite,
+    nodePulse 6s ease-in-out infinite alternate;
+  z-index: -1;
+  overflow: hidden;
+}
+
+/* Glowing nodes */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(circle at 30% 20%, rgba(20, 255, 236, 0.15) 0%, transparent 15%),
+    radial-gradient(circle at 70% 80%, rgba(255, 20, 236, 0.15) 0%, transparent 15%),
+    radial-gradient(circle at 50% 50%, rgba(120, 20, 255, 0.1) 0%, transparent 15%);
+  z-index: -1;
+  animation: nodeShift 16s ease-in-out infinite;
+}
+
+@keyframes gridScan {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 0 0, 0 800px, 800px 0; }
+}
+
+@keyframes nodePulse {
+  0% { opacity: 0.8; }
+  100% { opacity: 1; }
+}
+
+@keyframes nodeShift {
+  0%, 100% { 
+    transform: scale(1);
+    background-position: 
+      30% 20%,
+      70% 80%,
+      50% 50%;
+  }
+  25% { 
+    transform: scale(1.02);
+    background-position: 
+      35% 25%,
+      65% 75%,
+      55% 55%;
+  }
+  50% { 
+    transform: scale(1);
+    background-position: 
+      25% 15%,
+      75% 85%,
+      45% 45%;
+  }
+  75% { 
+    transform: scale(0.98);
+    background-position: 
+      32% 18%,
+      68% 82%,
+      52% 48%;
   }
 }
+}
+  /* Floating particles */
+  body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, #eee, transparent),
+      radial-gradient(2px 2px at 40px 70px, rgba(255,255,255,0.8), transparent),
+      radial-gradient(1px 1px at 90px 40px, #fff, transparent),
+      radial-gradient(1px 1px at 130px 80px, rgba(255,255,255,0.6), transparent),
+      radial-gradient(2px 2px at 160px 30px, #ddd, transparent);
+    background-repeat: repeat;
+    background-size: 200px 100px;
+    animation: sparkle 4s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes sparkle {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-100px); }
+  }
+
+
+@layer components {
+  .section-padding {
+    @apply py-16 px-4 sm:px-6 lg:px-8;
+  }
+  
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent;
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+  }
+  
+  .btn-primary {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-medium py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .btn-secondary {
+    @apply bg-transparent border-2 border-purple-500 text-purple-400 hover:bg-purple-500 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-200;
+  }
+  
+  .skill-bar {
+    @apply w-full bg-gray-700 rounded-full h-2.5;
+  }
+  
+  .skill-progress {
+    @apply bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full transition-all duration-1000;
+  }
+} 
