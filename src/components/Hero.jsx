@@ -27,7 +27,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <p className="text-gray-400 text-lg mb-4">Welcome to my portfolio</p>
+              <p className="text-gray-400 text-lg mb-4">Welcome,Salam,Namaste</p>
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Hi, I'm{' '}
                 <span className="gradient-text">Faizan Ahmad</span>
@@ -52,7 +52,7 @@ const Hero = () => {
                   2000,
                 ]}
                 wrapper="span"
-                speed={50}
+                speed={100}
                 repeat={Infinity}
                 className="text-white font-semibold"
               />
@@ -84,15 +84,7 @@ const Hero = () => {
                 <FiDownload className="text-lg" />
               </motion.button>
               
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection('#contact')}
-                className="btn-secondary flex items-center justify-center space-x-2"
-              >
-                <span>Hire Me</span>
-                <FiMail className="text-lg" />
-              </motion.button>
+              
             </motion.div>
 
             {/* Social Links */}
@@ -127,7 +119,7 @@ const Hero = () => {
                <motion.a
                  whileHover={{ scale: 1.1, y: -2 }}
                  whileTap={{ scale: 0.9 }}
-                 href="mailto:faizan@example.com"
+                 href="mailto:faizanahmad2020.fa@gmail.com"
                  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
                >
                  <FiMail className="text-2xl" />
@@ -139,7 +131,7 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0 }}
             className="relative"
           >
             <div className="relative w-full h-96 lg:h-[500px] rounded-2xl overflow-hidden">

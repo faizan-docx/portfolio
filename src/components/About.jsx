@@ -10,10 +10,9 @@ const About = () => {
   });
 
   const stats = [
-    { icon: FiCode, number: '4+', label: 'Projects Completed' },
-    { icon: FiDatabase, number: '3+', label: 'Years Experience' },
-    { icon: FiTrendingUp, number: '86.6%', label: '10th CBSE Score' },
-    { icon: FiAward, number: '76.4%', label: '12th CBSE Score' },
+    { icon: FiCode, number: '10+', label: 'Projects Completed' },
+    { icon: FiDatabase, number: '2+', label: 'Years Experience' },
+    
   ];
 
   const features = [
@@ -36,6 +35,7 @@ const About = () => {
       title: 'Creative Arts',
       description: 'Passionate about poetry writing and street photography, capturing candid moments and everyday stories.',
       icon: '📸',
+      
     },
   ];
 
@@ -81,8 +81,8 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            A passionate Computer Science student and web developer with expertise in creating innovative solutions 
-            and building responsive web applications using modern technologies.
+           A passionate Computer Science student and web developer skilled in creating innovative solutions and building responsive web applications using modern technologies.
+           I’m also a writer, a casual singer, and have a deep love for poetry.
           </p>
         </motion.div>
 

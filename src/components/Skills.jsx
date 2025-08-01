@@ -12,30 +12,31 @@ const Skills = () => {
     {
       title: 'Frontend Development',
       skills: [
-        { name: 'React.js', percentage: 90 },
+        { name: 'React.js', percentage: 95 },
         { name: 'JavaScript', percentage: 85 },
         { name: 'HTML/CSS', percentage: 95 },
-        { name: 'TypeScript', percentage: 80 },
+        { name: 'Bootstrap', percentage: 80 },
         { name: 'Tailwind CSS', percentage: 88 },
       ],
     },
     {
       title: 'Backend Development',
       skills: [
-        { name: 'Node.js', percentage: 85 },
+       
         { name: 'Python', percentage: 90 },
         { name: 'Express.js', percentage: 82 },
         { name: 'MongoDB', percentage: 78 },
         { name: 'PostgreSQL', percentage: 75 },
+
       ],
     },
     {
       title: 'Data Analysis',
       skills: [
         { name: 'Python (Pandas)', percentage: 92 },
-        { name: 'SQL', percentage: 88 },
+        { name: 'SQL', percentage: 85 },
         { name: 'Tableau', percentage: 85 },
-        { name: 'Power BI', percentage: 80 },
+        { name: 'Power BI', percentage: 30 },
         { name: 'Excel', percentage: 95 },
       ],
     },
@@ -44,7 +45,6 @@ const Skills = () => {
       skills: [
         { name: 'Git/GitHub', percentage: 90 },
         { name: 'Figma', percentage: 75 },
-        { name: 'Docker', percentage: 70 },
         { name: 'AWS', percentage: 65 },
         { name: 'Jira', percentage: 85 },
       ],
@@ -152,7 +152,7 @@ const Skills = () => {
         </div>
 
         {/* Additional Skills Grid */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 0.8, duration: 0.8 }}
@@ -179,7 +179,7 @@ const Skills = () => {
               </motion.div>
             ))}
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

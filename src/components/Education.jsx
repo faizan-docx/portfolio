@@ -11,54 +11,55 @@ const Education = () => {
 
   const education = [
     {
-      degree: 'Master of Science in Computer Science',
-      institution: 'University of Technology',
-      period: '2021 - 2023',
-      location: 'New York, USA',
-      description: 'Specialized in Software Engineering and Data Science with focus on machine learning algorithms and web development technologies.',
-      gpa: '3.9/4.0',
+      degree: 'Bachelors of Technology in Computer Science',
+      institution: 'Guru Gobind Singh Indraprastha University',
+      period: 'July 2022 - June 2026',
+      location: 'New Delhi, India',
+      description: 'Currently in 3rd year, pursuing comprehensive study of computer science fundamentals, algorithms, data structures, and software development methodologies.',
+     
       icon: '🎓',
     },
     {
-      degree: 'Bachelor of Technology in Computer Science',
-      institution: 'Technical University',
-      period: '2017 - 2021',
-      location: 'Mumbai, India',
-      description: 'Comprehensive study of computer science fundamentals, algorithms, data structures, and software development methodologies.',
-      gpa: '3.8/4.0',
+      degree: '12th CBSE',
+      institution: 'Rukmani Devi Jaipuria Public School',
+      period: '2021',
+      location: 'New Delhi, India',
+      description: 'Completed higher secondary education with focus on science stream.',
+      
       icon: '📚',
     },
+    {
+      degree: '10th CBSE',
+      institution: 'Rukmani Devi Jaipuria Public School',
+      period: '2019',
+      location: 'New Delhi, India',
+      description: 'Completed secondary education with excellent academic performance.',
+      
+      icon: '📚',
+    },
+     {
+      degree: 'Primary School',
+      institution: 'United English Medium School',
+      period: '-2018',
+      location: 'New Delhi, India',
+      description: 'Completed Primary education.',
+     
+      icon: '📖',
+    },
+    
   ];
+
 
   const certifications = [
     {
-      name: 'AWS Certified Solutions Architect',
-      issuer: 'Amazon Web Services',
-      date: '2023',
-      credential: 'AWS-SAA-001',
+      name: 'Full-Stack Web Development',
+      issuer: 'BrainMentors Private Limited',
+      date: 'June-2024',
+     
       icon: '☁️',
     },
-    {
-      name: 'Google Data Analytics Professional Certificate',
-      issuer: 'Google',
-      date: '2022',
-      credential: 'GOOGLE-DATA-001',
-      icon: '📊',
-    },
-    {
-      name: 'React Developer Certification',
-      issuer: 'Meta',
-      date: '2022',
-      credential: 'META-REACT-001',
-      icon: '⚛️',
-    },
-    {
-      name: 'Python Programming Certification',
-      issuer: 'Coursera',
-      date: '2021',
-      credential: 'COURSE-PYTHON-001',
-      icon: '🐍',
-    },
+   
+    
   ];
 
   const TimelineItem = ({ item, index, isLast }) => (
@@ -70,7 +71,7 @@ const Education = () => {
     >
       <div className="flex items-start space-x-4">
         <div className="flex-shrink-0">
-          <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center">
+          <div className="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-4">
             <span className="text-2xl">{item.icon}</span>
           </div>
           {!isLast && (
@@ -78,12 +79,10 @@ const Education = () => {
           )}
         </div>
         
-        <div className="flex-1 bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700">
+        <div className="flex-1 bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700 mb-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-xl font-bold text-white">{item.degree}</h3>
-            <span className="text-sm font-semibold text-purple-400 bg-purple-500/20 px-3 py-1 rounded-full">
-              {item.gpa}
-            </span>
+            
           </div>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-3">
@@ -128,7 +127,7 @@ const Education = () => {
           <span className="text-sm font-medium text-white">{cert.date}</span>
         </div>
         <div className="flex justify-between items-center">
-          <span className="text-sm text-gray-300">Credential ID:</span>
+          
           <span className="text-sm font-medium text-purple-400">{cert.credential}</span>
         </div>
       </div>
