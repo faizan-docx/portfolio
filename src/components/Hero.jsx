@@ -27,7 +27,7 @@ const Hero = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
-              <p className="text-gray-400 text-lg mb-4">Welcome,Salam,Namaste</p>
+             
               <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
                 Hi, I'm{' '}
                 <span className="gradient-text">Faizan Ahmad</span>
