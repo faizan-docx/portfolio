@@ -52,7 +52,7 @@ const Hero = () => {
                   2000,
                 ]}
                 wrapper="span"
-                speed={100}
+                speed={50}
                 repeat={Infinity}
                 className="text-white font-semibold"
               />
