@@ -10,32 +10,32 @@ const About = () => {
   });
 
   const stats = [
-    { icon: FiCode, number: '50+', label: 'Projects Completed' },
-    { icon: FiDatabase, number: '100+', label: 'Data Reports' },
-    { icon: FiTrendingUp, number: '95%', label: 'Client Satisfaction' },
-    { icon: FiAward, number: '3+', label: 'Years Experience' },
+    { icon: FiCode, number: '4+', label: 'Projects Completed' },
+    { icon: FiDatabase, number: '3+', label: 'Years Experience' },
+    { icon: FiTrendingUp, number: '86.6%', label: '10th CBSE Score' },
+    { icon: FiAward, number: '76.4%', label: '12th CBSE Score' },
   ];
 
   const features = [
     {
-      title: 'Web Development',
-      description: 'Full-stack development with modern technologies like React, Node.js, and Python.',
-      icon: '🌐',
+      title: 'Cultural Leadership',
+      description: 'Member of college Cultural Committee, organizing college fests, events, and student engagement programs.',
+      icon: '🎭',
     },
     {
-      title: 'Data Analysis',
-      description: 'Transform raw data into actionable insights using Python, SQL, and visualization tools.',
-      icon: '📊',
+      title: 'Creative Expression',
+      description: 'Lead vocalist of college Singing Society (Octave.bpit), performed in various competitions and cultural events.',
+      icon: '🎤',
     },
     {
-      title: 'UI/UX Design',
-      description: 'Create intuitive and beautiful user interfaces with Figma and modern design principles.',
-      icon: '🎨',
+      title: 'Communication Skills',
+      description: 'Recognized for delivering engaging presentations with strong communication and public speaking abilities.',
+      icon: '💬',
     },
     {
-      title: 'Problem Solving',
-      description: 'Analytical approach to complex problems with innovative solutions.',
-      icon: '💡',
+      title: 'Creative Arts',
+      description: 'Passionate about poetry writing and street photography, capturing candid moments and everyday stories.',
+      icon: '📸',
     },
   ];
 
@@ -81,8 +81,8 @@ const About = () => {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto">
-            A passionate Web Developer and Data Analyst with expertise in creating innovative solutions 
-            and transforming complex data into meaningful insights.
+            A passionate Computer Science student and web developer with expertise in creating innovative solutions 
+            and building responsive web applications using modern technologies.
           </p>
         </motion.div>
 
@@ -94,23 +94,25 @@ const About = () => {
             transition={{ delay: 0.2, duration: 0.8 }}
           >
             <h3 className="text-2xl font-bold text-white mb-6">
-              Turning Ideas Into Reality
+              Professional Summary
             </h3>
             <div className="space-y-4 text-gray-300">
               <p>
-                I'm a dedicated professional with a strong foundation in both web development and data analysis. 
-                My journey began with a curiosity about how technology can solve real-world problems, and it has 
-                evolved into a passion for creating impactful digital solutions.
+                I'm a dedicated Computer Science student at Bhagwan Parshuram Institute of Technology, 
+                currently in my 3rd year. My journey in technology began with a curiosity about how 
+                digital solutions can solve real-world problems, and it has evolved into a passion for 
+                creating impactful web applications.
               </p>
               <p>
-                With expertise in modern web technologies like React, Node.js, and Python, I build responsive 
-                and scalable applications that deliver exceptional user experiences. My data analysis skills 
-                enable me to extract valuable insights from complex datasets, helping businesses make 
-                data-driven decisions.
+                Beyond academics, I'm actively involved in college cultural activities as a member of 
+                the Cultural Committee and lead vocalist of the official college Singing Society (Octave.bpit). 
+                I've performed in various intra- and inter-college competitions, developing strong communication 
+                and public speaking skills.
               </p>
               <p>
-                I believe in continuous learning and staying updated with the latest industry trends. 
-                Every project is an opportunity to innovate and push the boundaries of what's possible.
+                I'm passionate about creative expression through poetry writing and street photography, 
+                capturing candid moments and everyday stories through a creative lens. I also contributed 
+                to the college dramatics society, gaining exposure to theatrical expression and team collaboration.
               </p>
             </div>
           </motion.div>

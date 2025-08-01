@@ -46,9 +46,9 @@ const Hero = () => {
                   2000,
                   'I\'m a Developer',
                   2000,
-                  'I\'m a Designer',
-                  2000,
                   'I\'m a Problem Solver',
+                  2000,
+                  'I\'m a Singer/Writer',
                   2000,
                 ]}
                 wrapper="span"
@@ -105,7 +105,7 @@ const Hero = () => {
                              <motion.a
                  whileHover={{ scale: 1.1, y: -2 }}
                  whileTap={{ scale: 0.9 }}
-                 href="https://github.com/faizanahmad"
+                 href="https://github.com/faizan-docx"
                  target="_blank"
                  rel="noopener noreferrer"
                  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"

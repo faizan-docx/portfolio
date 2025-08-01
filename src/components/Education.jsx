@@ -136,47 +136,20 @@ const Education = () => {
   );
 
   return (
-    <section id="education" className="section-padding relative bg-gray-900">
-      {/* 3D Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            rotate: 360,
-            scale: [1, 1.1, 1],
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-1/4 left-1/4 w-40 h-40 bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-full blur-2xl"
-        />
-        <motion.div
-          animate={{
-            rotate: -360,
-            scale: [1, 0.9, 1],
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute bottom-1/4 right-1/4 w-32 h-32 bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-full blur-2xl"
-        />
-        <motion.div
-          animate={{
-            rotate: 180,
-            scale: [1, 1.2, 1],
-          }}
-          transition={{
-            duration: 30,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-          className="absolute top-1/2 left-1/2 w-24 h-24 bg-gradient-to-br from-green-500/10 to-teal-500/10 rounded-full blur-xl"
-        />
+    <section id="education" className="section-padding relative">
+      {/* Cyberpunk Grid Background */}
+      <div className="fixed inset-0 w-full h-full -z-10">
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a14] to-[#121220]"></div>
+        <div className="absolute inset-0 bg-[length:40px_40px] bg-[linear-gradient(rgba(20,255,236,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(20,255,236,0.1)_1px,transparent_1px)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(20,255,236,0.15)_0%,transparent_15%),radial-gradient(circle_at_70%_80%,rgba(255,20,236,0.15)_0%,transparent_15%),radial-gradient(circle_at_50%_50%,rgba(120,20,255,0.1)_0%,transparent_15%)]"></div>
       </div>
-      
+
+      {/* Floating particles */}
+      <div className="fixed inset-0 w-full h-full -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(2px_2px_at_20px_30px,#eee,transparent),radial-gradient(2px_2px_at_40px_70px,rgba(255,255,255,0.8),transparent),radial-gradient(1px_1px_at_90px_40px,#fff,transparent),radial-gradient(1px_1px_at_130px_80px,rgba(255,255,255,0.6),transparent),radial-gradient(2px_2px_at_160px_30px,#ddd,transparent)] bg-repeat bg-[length:200px_100px]"></div>
+      </div>
+
+      {/* Content */}
       <div className="container-custom relative z-10">
         <motion.div
           ref={ref}
@@ -243,6 +216,22 @@ const Education = () => {
           </div>
         </motion.div>
       </div>
+
+      {/* Animation styles */}
+      <style jsx>{`
+        @keyframes gridScan {
+          0% { background-position: 0 0, 0 0, 0 0; }
+          100% { background-position: 0 0, 0 800px, 800px 0; }
+        }
+        @keyframes nodePulse {
+          0% { opacity: 0.8; }
+          100% { opacity: 1; }
+        }
+        @keyframes sparkle {
+          0% { transform: translateY(0px); }
+          100% { transform: translateY(-100px); }
+        }
+      `}</style>
     </section>
   );
 };

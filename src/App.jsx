@@ -8,7 +8,7 @@ import Projects from './components/Projects.jsx';
 import Education from './components/Education.jsx';
 import Resume from './components/Resume.jsx';
 import Contact from './components/Contact.jsx';
-import Footer from './components/Footer.jsx';
+// import Footer from './components/Footer.jsx';
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -52,7 +52,7 @@ function App() {
                     <Resume />
                     <Contact />
                   </main>
-                  <Footer />
+                  {/* <Footer /> */}
                 </div>
               );
 }
