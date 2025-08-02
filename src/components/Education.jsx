@@ -42,7 +42,7 @@ const Education = () => {
       institution: 'United English Medium School',
       period: '-2018',
       location: 'New Delhi, India',
-      description: 'Completed Primary education.',
+      description: 'Completed my Primary education.',
      
       icon: '📖',
     },
