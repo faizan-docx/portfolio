@@ -77,7 +77,7 @@ const Hero = () => {
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                onClick={() => scrollToSection('#resume')}
+                href="/myResume.pdf"
                 className="btn-primary flex items-center justify-center space-x-2"
               >
                 <span>Download My Resume</span>
