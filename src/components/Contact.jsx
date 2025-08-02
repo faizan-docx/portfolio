@@ -40,7 +40,7 @@ const Contact = () => {
     {
       icon: FiLinkedin,
       name: 'LinkedIn',
-      url: 'https://linkedin.com/in/faizanahmad',
+      url: 'https://linkedin.com/in/faizan-ahmad-595356201/',
       color: 'hover:text-blue-400',
     },
     {

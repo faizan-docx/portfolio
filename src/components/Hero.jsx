@@ -151,7 +151,7 @@ const Hero = () => {
         </div>
         
         {/* Scroll Indicator */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1.2, duration: 0.8 }}
@@ -167,7 +167,7 @@ const Hero = () => {
               />
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
