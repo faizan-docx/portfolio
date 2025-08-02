@@ -34,7 +34,7 @@ const Contact = () => {
     {
       icon: FiGithub,
       name: 'GitHub',
-      url: 'https://github.com/faizanahmad',
+      url: 'https://github.com/faizan-docx',
       color: 'hover:text-gray-300',
     },
     {
@@ -46,7 +46,7 @@ const Contact = () => {
     {
       icon: FiTwitter,
       name: 'Twitter',
-      url: 'https://twitter.com/faizanmendiratta',
+      url: 'https://twitter.com/iamfaizaannn',
       color: 'hover:text-blue-400',
     },
   ];
