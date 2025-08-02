@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { FiMail, FiPhone, FiMapPin, FiGithub, FiLinkedin, FiTwitter } from 'react-icons/fi';
-
+import { FiInstagram } from 'react-icons/fi';
 const Contact = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
@@ -28,6 +28,7 @@ const Contact = () => {
       value: 'New Delhi, India',
       link: null,
     },
+   
   ];
 
   const socialLinks = [
@@ -49,6 +50,13 @@ const Contact = () => {
       url: 'https://twitter.com/iamfaizaannn',
       color: 'hover:text-blue-400',
     },
+    {
+      icon: FiInstagram,
+      name: 'Instagram',
+      url: 'https://instagram.com/iamfaizaannn',
+      color: 'hover:text-blue-400',
+    },
+    
   ];
 
   return (

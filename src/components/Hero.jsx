@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { TypeAnimation } from 'react-type-animation';
 import { FiGithub, FiLinkedin, FiMail, FiDownload } from 'react-icons/fi';
+import { FiInstagram } from 'react-icons/fi';
 
 const Hero = () => {
   const scrollToSection = (href) => {
@@ -128,6 +129,19 @@ const Hero = () => {
                >
                  <FiMail className="text-2xl" />
                </motion.a>
+
+
+              <motion.a
+  whileHover={{ scale: 1.1, y: -2 }}
+  whileTap={{ scale: 0.9 }}
+  href="https://www.instagram.com/iamfaizaannn" // Replace with your actual Instagram URL
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+>
+  <FiInstagram className="text-2xl" />
+</motion.a>
+               
             </motion.div>
           </motion.div>
 
