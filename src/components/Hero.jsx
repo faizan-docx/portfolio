@@ -74,15 +74,19 @@ const Hero = () => {
               transition={{ delay: 0.8, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                href="/myResume.pdf"
-                className="btn-primary flex items-center justify-center space-x-2"
-              >
-                <span>Download My Resume</span>
-                <FiDownload className="text-lg" />
-              </motion.button>
+                        <motion.a
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            href="/myResume.pdf"
+            download="Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-primary flex items-center justify-center space-x-2"
+          >
+            <span>Download My Resume</span>
+            <FiDownload className="text-lg" />
+          </motion.a>
+
               
               
             </motion.div>
