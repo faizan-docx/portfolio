@@ -174,7 +174,7 @@ const Projects = () => {
           <motion.a
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="https://github.com/faizanmendiratta"
+            href="https://github.com/faizan-docx"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-primary inline-flex items-center space-x-2"
