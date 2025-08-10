@@ -16,7 +16,6 @@ const Education = () => {
       period: 'July 2022 - June 2026',
       location: 'New Delhi, India',
       description: 'Currently in 3rd year, pursuing comprehensive study of computer science fundamentals, algorithms, data structures, and software development methodologies.',
-     
       icon: '🎓',
     },
     {
@@ -25,7 +24,6 @@ const Education = () => {
       period: '2021',
       location: 'New Delhi, India',
       description: 'Completed higher secondary education with focus on science stream.',
-      
       icon: '📚',
     },
     {
@@ -34,32 +32,40 @@ const Education = () => {
       period: '2019',
       location: 'New Delhi, India',
       description: 'Completed secondary education with excellent academic performance.',
-      
       icon: '📚',
     },
-     {
+    {
       degree: 'Primary School',
       institution: 'United English Medium School',
       period: '-2018',
       location: 'New Delhi, India',
       description: 'Completed my Primary education.',
-     
       icon: '📖',
     },
-    
   ];
-
 
   const certifications = [
     {
       name: 'Full-Stack Web Development',
       issuer: 'BrainMentors Private Limited',
       date: 'June-2024',
-     
       icon: '☁️',
+      image:''
     },
-   
-    
+    {
+      name: 'HTML Certificate',
+      issuer: 'Online Course',
+      date: '2023',
+      icon: '📄',
+      image: 'HTML.jpg'
+    },
+    {
+      name: 'PowerBI',
+      issuer: 'Online Workshop',
+      date: '2025',
+      icon: '📄',
+      image: 'PowerBI.jpeg'
+    }
   ];
 
   const TimelineItem = ({ item, index, isLast }) => (
@@ -82,7 +88,6 @@ const Education = () => {
         <div className="flex-1 bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700 mb-4">
           <div className="flex items-center justify-between mb-2">
             <h3 className="text-xl font-bold text-white">{item.degree}</h3>
-            
           </div>
           
           <div className="flex flex-wrap items-center gap-4 text-sm text-gray-300 mb-3">
@@ -113,23 +118,43 @@ const Education = () => {
       transition={{ delay: 0.6 + index * 0.1, duration: 0.5 }}
       className="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700 card-hover"
     >
-      <div className="flex items-center space-x-4 mb-4">
-        <div className="text-3xl">{cert.icon}</div>
-        <div>
-          <h4 className="text-lg font-bold text-white">{cert.name}</h4>
-          <p className="text-sm text-gray-300">{cert.issuer}</p>
+      {cert.image ? (
+        <>
+          <div className="mb-4">
+            <img 
+              src={`/${cert.image}`} 
+              alt={`${cert.name} certificate`}
+              className="w-full h-auto rounded-lg border border-gray-600"
+            />
+          </div>
+          <div className="flex items-center space-x-2">
+            <div className="text-xl">{cert.icon}</div>
+            <div>
+              <h4 className="text-lg font-bold text-white">{cert.name}</h4>
+              <p className="text-sm text-gray-300">{cert.issuer}</p>
+            </div>
+          </div>
+        </>
+      ) : (
+        <div className="flex items-center space-x-4 mb-4">
+          <div className="text-3xl">{cert.icon}</div>
+          <div>
+            <h4 className="text-lg font-bold text-white">{cert.name}</h4>
+            <p className="text-sm text-gray-300">{cert.issuer}</p>
+          </div>
         </div>
-      </div>
+      )}
       
-      <div className="space-y-2">
+      <div className="space-y-2 mt-4">
         <div className="flex justify-between items-center">
           <span className="text-sm text-gray-300">Date:</span>
           <span className="text-sm font-medium text-white">{cert.date}</span>
         </div>
-        <div className="flex justify-between items-center">
-          
-          <span className="text-sm font-medium text-purple-400">{cert.credential}</span>
-        </div>
+        {cert.credential && (
+          <div className="flex justify-between items-center">
+            <span className="text-sm font-medium text-purple-400">{cert.credential}</span>
+          </div>
+        )}
       </div>
     </motion.div>
   );
@@ -188,9 +213,9 @@ const Education = () => {
           <h3 className="text-2xl font-bold text-white text-center mb-8">
             Professional Certifications
           </h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <CertificationCard key={cert.name} cert={cert} index={index} />
+              <CertificationCard key={`${cert.name}-${index}`} cert={cert} index={index} />
             ))}
           </div>
         </div>
@@ -229,6 +254,11 @@ const Education = () => {
         @keyframes sparkle {
           0% { transform: translateY(0px); }
           100% { transform: translateY(-100px); }
+        }
+        .card-hover:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 10px 25px rgba(159, 122, 234, 0.3);
+          transition: all 0.3s ease;
         }
       `}</style>
     </section>
