@@ -45,13 +45,7 @@ const Education = () => {
   ];
 
   const certifications = [
-     {
-      name: 'HTML Certificate',
-      issuer: 'Online Course',
-      date: '2023',
-      icon: '📄',
-      image: 'HTML.jpg'
-    },
+    
     {
       name: 'Full-Stack Web Development',
       issuer: 'BrainMentors Private Limited',
@@ -59,7 +53,6 @@ const Education = () => {
       icon: '☁️',
       image:'Brainmentors.jpeg'
     },
-   
     {
       name: 'PowerBI',
       issuer: 'Online Workshop',
