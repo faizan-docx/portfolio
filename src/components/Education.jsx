@@ -56,7 +56,7 @@ const Education = () => {
     {
       name: 'PowerBI',
       issuer: 'Online Workshop',
-      date: '2025',
+      date: 'June-2025',
       icon: '📄',
       image: 'PowerBI.jpeg'
     }
