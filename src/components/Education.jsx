@@ -219,8 +219,7 @@ const Education = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ delay: 1, duration: 0.8 }}
-          className="mt-16 text-center"
-        >
+          className="mt-16 text-center">
           <div className="bg-gray-800/50 backdrop-blur-sm p-8 rounded-xl shadow-lg border border-gray-700 max-w-2xl mx-auto">
             <FiAward className="text-4xl text-purple-400 mx-auto mb-4" />
             <h4 className="text-xl font-bold text-white mb-2">
