@@ -59,6 +59,13 @@ const Education = () => {
       date: 'June-2025',
       icon: '📄',
       image: 'PowerBI.jpeg'
+    },
+    {
+      name: 'Letter of Appreciation',
+      issuer: 'Recognition of Excellence',
+      date: '2025',
+      icon: '🏆',
+      image: 'LOA.jpg'
     }
   ];
 
